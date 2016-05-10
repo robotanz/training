@@ -1,5 +1,7 @@
 package com.robotanz.training.sorters;
 
+import com.robotanz.training.ArrayUtil;
+
 
 /**
  * IFP-Group <br>
@@ -57,15 +59,11 @@ public class QuickSort {
      */
     public static void main(String argv[]) {
 
-        int[] array = new int[2000];
-
-        for (int i = 0; i < array.length; ++i) {
-            array[i] = (int) Math.floor(Math.random() * 2000);
-        }
+        int[] array = ArrayUtil.randomIntArray(2000);
 
         QuickSort quickSort = new QuickSort();
         quickSort.sort(array, 0, array.length - 1);
 
-        System.out.println(array);
+        System.out.println(ArrayUtil.arrayToString(array, 64));
     }
 }
