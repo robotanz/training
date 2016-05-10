@@ -1,19 +1,21 @@
 package com.robotanz.training.sorters;
 
 import com.robotanz.training.ArrayUtil;
+import com.robotanz.training.TestUtil;
 
 
 /**
  * IFP-Group <br>
  * Infrastructure Project <br>
  * <p>
- * QuickSort: Basic QuickSort single threaded implementation, could be multi-threaded as well.
+ * QuickSort: Basic QuickSort single threaded implementation, could be multi-threaded as well. The
+ * average complexity is O(n log(n))
  * <p>
  * Created on 9 mai 2016
  *
  * @author Jgenti
  */
-public class QuickSort {
+public class QuickSort implements ISorter {
 
     public QuickSort() {
         super();
@@ -59,11 +61,11 @@ public class QuickSort {
      */
     public static void main(String argv[]) {
 
-        int[] array = ArrayUtil.randomIntArray(2000);
+        TestUtil.testSorter(new QuickSort(), 2000);
+    }
 
-        QuickSort quickSort = new QuickSort();
-        quickSort.sort(array, 0, array.length - 1);
-
-        System.out.println(ArrayUtil.arrayToString(array, 64));
+    @Override
+    public void sort(int[] array) {
+        sort(array, 0, array.length - 1);
     }
 }

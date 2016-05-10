@@ -1,6 +1,7 @@
 package com.robotanz.training.sorters;
 
 import com.robotanz.training.ArrayUtil;
+import com.robotanz.training.TestUtil;
 
 /**
  * IFP-Group <br>
@@ -12,14 +13,15 @@ import com.robotanz.training.ArrayUtil;
  *
  * @author Jgenti
  */
-public class SelectionSort {
+public class SelectionSort implements ISorter {
 
     /**
      * Sort the given array
      *
      * @param array
      */
-    public static void sort(int[] array) {
+    @Override
+    public void sort(int[] array) {
         sort(array, 0, array.length - 1);
     }
 
@@ -57,5 +59,14 @@ public class SelectionSort {
                 }
             }
         }
+    }
+
+    /**
+     * Test
+     *
+     * @param argv
+     */
+    public static void main(String argv[]) {
+        TestUtil.testSorter(new SelectionSort(), 50);
     }
 }

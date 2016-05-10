@@ -1,6 +1,6 @@
 package com.robotanz.training.sorters;
 
-import com.robotanz.training.ArrayUtil;
+import com.robotanz.training.TestUtil;
 
 /**
  * IFP-Group <br>
@@ -12,8 +12,9 @@ import com.robotanz.training.ArrayUtil;
  *
  * @author Jgenti
  */
-public class MergeSort {
+public class MergeSort implements ISorter {
 
+    @Override
     public void sort(final int[] array) {
         sort(array, 0, array.length-1);
     }
@@ -70,12 +71,7 @@ public class MergeSort {
 
     public static void main(String[] args) {
 
-        int[] array = ArrayUtil.randomIntArray(32);
-
-        MergeSort sorter = new MergeSort();
-        sorter.sort(array);
-
-        System.out.println(ArrayUtil.arrayToString(array, 64));
+        TestUtil.testSorter(new MergeSort(), 32);
     }
 
 }
