@@ -61,7 +61,7 @@ public class QuickSort implements ISorter {
      */
     public static void main(String argv[]) {
 
-        TestUtil.testSorter(new QuickSort(), 2000);
+        TestUtil.testSorter(new QuickSort(), 50000);
     }
 
     @Override

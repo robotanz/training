@@ -54,7 +54,7 @@ public class InsertionSort implements ISorter {
             for (int i = first + 1; i <= last; ++i) {
 
                 // move the value upstream until it is inserted in the right place
-                for (int j = i - 1; j >= 0 && array[j] > array[j + 1]; --j) {
+                for (int j = i - 1; j >= first && array[j] > array[j + 1]; --j) {
                     ArrayUtil.swap(array, j + 1, j);
                 }
             }
@@ -67,6 +67,6 @@ public class InsertionSort implements ISorter {
      * @param argv
      */
     public static void main(String argv[]) {
-        TestUtil.testSorter(new InsertionSort(), 50);
+        TestUtil.testSorter(new InsertionSort(), 50000);
     }
 }

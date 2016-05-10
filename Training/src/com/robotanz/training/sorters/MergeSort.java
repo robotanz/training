@@ -19,7 +19,7 @@ public class MergeSort implements ISorter {
         sort(array, 0, array.length-1);
     }
 
-    private void sort(final int[] array, int first, int last) {
+    private void sort(final int[] array, final int first, final int last) {
 
         int length = last - first + 1;
         if(length < 8) {
@@ -28,37 +28,27 @@ public class MergeSort implements ISorter {
         }
         else {
             // split & recursive sort
-            int split = length /2;
-            sort(array, first, first+split);
-            sort(array, first+split+1, last);
+            int middle = length /2;
+            sort(array, first, first+middle);
+            sort(array, first+middle+1, last);
 
             // merge
             int leftIndex = first; // left current index
-            int rightIndex = first+split+1; // right
-            int leftStopMark = rightIndex; // left stop index
-            int rightStopMark = last+1;
-            boolean yieldLeft = false; // when true, yields all left values remaining
-            boolean yieldRight = false; // idem for right values
+            int rightIndex = first+middle+1; // right
+            final int leftStopMark = rightIndex; // left stop index
+            final int rightStopMark = last + 1;
 
             int[] buf = new int[length];
             for(int i=0; i<length; ++i) {
                 // yieldLeft ? go ahead, yieldRight ? jump to else otherwise compare values
-                if(yieldLeft || !yieldRight && array[leftIndex] < array[rightIndex]) {
+                if (rightIndex == rightStopMark || !(leftIndex == leftStopMark)
+                        && array[leftIndex] < array[rightIndex]) {
                     buf[i] = array[leftIndex];
                     ++leftIndex;
-
-                    if(leftIndex == leftStopMark) {
-                        //yieldLeft = false;
-                        yieldRight = true;
-                    }
                 }
                 else {
                     buf[i] = array[rightIndex];
                     ++rightIndex;
-                    if(rightIndex == rightStopMark) {
-                        yieldLeft = true;
-                        //yieldRight = false;
-                    }
                 }
             }
 
@@ -71,7 +61,7 @@ public class MergeSort implements ISorter {
 
     public static void main(String[] args) {
 
-        TestUtil.testSorter(new MergeSort(), 32);
+        TestUtil.testSorter(new MergeSort(), 50000);
     }
 
 }

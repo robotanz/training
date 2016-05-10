@@ -12,7 +12,10 @@ public class TestUtil {
 
         int[] proofArray = IntStream.of(array).sorted().toArray();
 
+        long startTime = System.currentTimeMillis();
         sorter.sort(array);
+        long endTime = System.currentTimeMillis();
+
         System.out.println(ArrayUtil.arrayToString(array, 64));
 
         boolean success = true;
@@ -25,5 +28,7 @@ public class TestUtil {
 
         String sorterName = sorter.getClass().getSimpleName();
         System.out.println(sorterName + (success ? " OK" : " Failed!"));
+
+        System.out.println("Time: " + (endTime - startTime) + " ms");
     }
 }
