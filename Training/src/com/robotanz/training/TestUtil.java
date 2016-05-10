@@ -29,6 +29,6 @@ public class TestUtil {
         String sorterName = sorter.getClass().getSimpleName();
         System.out.println(sorterName + (success ? " OK" : " Failed!"));
 
-        System.out.println("Time: " + (endTime - startTime) + " ms");
+        System.out.println("Sorted " + arraySize + " elements in " + (endTime - startTime) + " ms");
     }
 }
