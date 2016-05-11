@@ -4,15 +4,8 @@ import com.robotanz.training.ArrayUtil;
 import com.robotanz.training.TestUtil;
 
 /**
- * IFP-Group <br>
- * Infrastructure Project <br>
- * <p>
  * InsertionSort: simple insertion sort with average complexity of O(n²). This is similar to the
  * {@link SelectionSort}, however it may perform better in most cases.
- * <p>
- * Created on 10 mai 2016
- *
- * @author Jgenti
  */
 public class InsertionSort implements ISorter {
 

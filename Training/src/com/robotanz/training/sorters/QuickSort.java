@@ -5,15 +5,8 @@ import com.robotanz.training.TestUtil;
 
 
 /**
- * IFP-Group <br>
- * Infrastructure Project <br>
- * <p>
  * QuickSort: Basic QuickSort single threaded implementation, could be multi-threaded as well. The
  * average complexity is O(n log(n))
- * <p>
- * Created on 9 mai 2016
- *
- * @author Jgenti
  */
 public class QuickSort implements ISorter {
 

@@ -3,14 +3,7 @@ package com.robotanz.training.sorters;
 import com.robotanz.training.TestUtil;
 
 /**
- * IFP-Group <br>
- * Infrastructure Project <br>
- * <p>
  * MergeSort: merge sort algorithm implementation. The average complexity is O(n log(n))
- * <p>
- * Created on 10 mai 2016
- *
- * @author Jgenti
  */
 public class MergeSort implements ISorter {
 

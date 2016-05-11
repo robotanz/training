@@ -4,14 +4,7 @@ import com.robotanz.training.ArrayUtil;
 import com.robotanz.training.TestUtil;
 
 /**
- * IFP-Group <br>
- * Infrastructure Project <br>
- * <p>
  * SelectionSort: simple selection sort algorithm with general O(n²) complexity
- * <p>
- * Created on 10 mai 2016
- *
- * @author Jgenti
  */
 public class SelectionSort implements ISorter {
 
