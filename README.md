@@ -1,4 +1,4 @@
 # training
-Just some basic exercices with algorithms etc.
+Just some basic exercises with algorithms etc.
 
-This is an Eclipe Java project
+This is an Eclipse Java project
