@@ -60,6 +60,6 @@ public class SelectionSort implements ISorter {
      * @param argv
      */
     public static void main(String argv[]) {
-        TestUtil.testSorter(new SelectionSort(), 50000);
+        TestUtil.doubleTestSorter(new SelectionSort(), 50000);
     }
 }

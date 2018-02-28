@@ -54,7 +54,7 @@ public class MergeSort implements ISorter {
 
     public static void main(String[] args) {
 
-        TestUtil.testSorter(new MergeSort(), 50000);
+        TestUtil.doubleTestSorter(new MergeSort(), 50000);
     }
 
 }
